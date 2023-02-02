@@ -54,7 +54,7 @@
 
 
 
-                               <li class="notification-item ">
+                               {{-- <li class="notification-item ">
                                 <a href="edit" 
                                 class="btn btn-outline-success btn-sm w-100"
                                 ><i class="fa-solid fa-pen-to-square"></i></a>
@@ -66,7 +66,7 @@
 
                                <li class="notification-item ">
                                 <a href="delete" class="btn btn-outline-success btn-sm w-100"><i class="fa-solid fa-trash"></i></a>
-                               </li>
+                               </li> --}}
 
 
                                <li class="notification-item">

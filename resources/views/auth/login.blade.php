@@ -4,7 +4,7 @@
     <div class="container adjust">
         <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6 shadow mt-3">
+            <div class="col-md-6 shadow mt-4 ">
                 <div class="shadow-header text-center">
                     <p>লগইন করুন</p>
                 </div>

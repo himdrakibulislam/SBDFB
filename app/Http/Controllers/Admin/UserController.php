@@ -7,6 +7,7 @@ use App\Models\Session;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -123,7 +124,9 @@ class UserController extends Controller
         if($user->role_as == 1){
             return redirect('admin/users')->with('status','You can not delete the admin account');
         }else{
-
+            if(File::exists($user->profile_url)){
+                File::delete($user->profile_url);
+            }
             $user->delete();
             return redirect('admin/users')->with('status',$user->name.' has been removed');
         }

@@ -1,7 +1,7 @@
 @extends('layouts.front')
 @section('title','রক্তদাতা')
 @section('content')
-<div class="container adjust">
+<div class="container ">
     <div class="row mb-5 ">
         
         <div class="col-md-2"></div>
@@ -129,6 +129,7 @@
             
             </form>
         </div>
+        
         <div class="col-md-2"></div>
 
 
@@ -138,7 +139,8 @@
 
         @foreach ($bloodDonors as $donor)
             
-        <div class="col-md-4 mt-4 border border-success rounded">
+      <div 
+         class="col-md-4 mt-4 border border-success   rounded ">
 
 
             
@@ -171,11 +173,13 @@
                   </div>
      
      
-                  <div class="col-md-6">
+                  <div class="col-md-6 ">
                      <p><i class="fa-solid fa-user mx-3"></i>{{$donor->gender}}</p>
                      
                      @if ($donor->email)
-                     <p><i class="fa-solid fa-envelope mx-3"></i>{{$donor->email}}</p>
+                     <p><i class="fa-solid fa-envelope mx-3"></i>
+                      {!!  substr($donor->email,0,15) !!}...
+                    </p>
                          
                      @endif
      
@@ -192,17 +196,17 @@
                          </small>
                   </div>
                 </div>
-        </div>
-        @endforeach
-        @else
-        
-        <h3 class="text-center fw-bold">No Donors</h3>
-        @endif
+              </div>
+           @endforeach
 
-        
-        
-        
-    </div>
-    {{ $bloodDonors->links() }}
+
+
+          @else
+
+         <h3 class="text-center fw-bold">No Donors</h3>
+            @endif
+      </div>
+
+       {{ $bloodDonors->links() }}
 </div>
 @endsection

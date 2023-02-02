@@ -40,15 +40,56 @@
         <div class="col-md-2"></div>
 
 
-       
-
-  
-        
-        
-
-
    
     </div>
+
+
+
+    
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 border rounded border-secondary p-3">
+        
+        <p class="fw-bold">  সর্বশেষ রক্ত দানের তারিখ পরিবর্তন </p>
+
+
+
+        <form action="{{url('/date-change')}}" method="POST">
+          
+         @csrf
+         @method('PATCH')
+          <div class="input-group mb-2">
+            <span class="input-group-addon p-2">
+                <i class="fa-solid fa-calendar-days text-success"></i>
+           </span>
+            <input 
+            type="date"
+             id="last_donated"
+             name="last_donated"
+             value="{{$user->last_donated}}"
+             class="form-control @error('last_donated') is-invalid @enderror" 
+              required
+            >   
+               
+            
+            </div>
+            @error('last_donated')
+             <div class="alert alert-danger">{{ $message }}</div>
+             @enderror
+
+              
+             <button type="submit" class="btn-custom w-50 float-end">পরিবর্তন</button>
+            </form>
+
+
+        </form> 
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+
+
 
     <div class="row my-4">
         

@@ -36,8 +36,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit-profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update'); 
     Route::post('/upload-profile', [ProfileController::class, 'uploadProfile']);
+
+    Route::patch('/date-change',[ProfileController::class,'dateChange']);
+
 });
-Route::post('/test-req', [ProfileController::class, 'test']);
+
 
 
 //front controller

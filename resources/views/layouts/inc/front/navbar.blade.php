@@ -16,20 +16,31 @@
 
         <li>
           <a class="nav-link scrollto {{request()->is('/') ? 'active' : '' }}" href="{{url('/')}}">
-            হোম
+            <small class="navsize">
+              হোম 
+
+            </small>
           </a>
         </li>
 
          <li>
-          <a class="nav-link scrollto {{request()->is('blood-donors') ? 'active' : '' }}" href="{{url('/blood-donors')}}">
-            রক্তদাতা
+          <a class="nav-link scrollto  {{request()->is('blood-donors') ? 'active' : '' }}" href="{{url('/blood-donors')}}">
+            <small class="navsize">
+              রক্তদাতা
+              
+
+            </small>
           </a>
         </li>
 
 
         <li>
           <a class="nav-link scrollto {{request()->is('about') ? 'active' : '' }}" href="{{url('/about')}}">
-            যোগাযোগ
+            <small class="navsize">
+              যোগাযোগ
+            
+
+            </small>
           </a>
         </li>
 
@@ -91,13 +102,19 @@
 
                     <li>
                       <a class="nav-link scrollto {{request()->is('login') ? 'active' : '' }}" href="{{url('/login')}}">
-                      লগইন
+                        <small class="navsize">
+                        লগইন
+                      
+          
+                      </small>
                       </a>
                    </li>
                         @if (Route::has('register'))
                         <li>
                           <a class="nav-link scrollto {{request()->is('register') ? 'active' : '' }}" href="{{url('/register')}}">
-                          রেজিস্ট্রেশন
+                            <small class="navsize">
+                            রেজিস্ট্রেশন
+                          </small>
                           </a>
                         </li>
                         @endif

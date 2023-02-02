@@ -576,7 +576,7 @@ input[type="color"]:focus,
   }
 
 footer{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .footerpart-2{
@@ -603,7 +603,7 @@ footer{
   padding-bottom: 310px;
 }
 .adjust{
-  padding-bottom: 130px;
+  padding-bottom: 250px;
 }
 /* forgot password style */
 .forgot{
@@ -617,6 +617,15 @@ footer{
   width: 120px;
   
 }
+.navsize{
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+.plt{
+  margin-top: 0px;
+}
+
 @media only screen and (max-width: 600px) {
  .carouselImg{
   height: 200px;
@@ -624,4 +633,8 @@ footer{
  .logo-style{
   width: 70px;
  }
+ .plt{
+  margin-top: 20px;
+ }
 }
+

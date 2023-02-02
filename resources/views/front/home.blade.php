@@ -1,8 +1,8 @@
 @extends('layouts.front')
 @section('content')
-    <div class="container ">
-      <div class="row my-4">
-        <p class="bg-black-50  p-3 border rounded" style="text-align:justify;font-size:16px;">রক্তদান একটি মহৎ অভ্যাস। বিশ্বে দিন দিন স্বেচ্ছায় রক্তদান বাড়ছে।এই মহৎ উদ্যোগে সোনারতরী রক্তদান ফাউন্ডেশন বাংলাদেশ অগ্রণী ভূমিকা পালন করায় দৃঢ় প্রত্যয় প্রকাশ করে।
+    <div class="container my-5">
+      <div class="row">
+        <p class="bg-black-50  p-3 border rounded" style="text-align:justify;font-size:16px; margin-bottom: 8px">রক্তদান একটি মহৎ অভ্যাস। বিশ্বে দিন দিন স্বেচ্ছায় রক্তদান বাড়ছে।এই মহৎ উদ্যোগে সোনারতরী রক্তদান ফাউন্ডেশন বাংলাদেশ অগ্রণী ভূমিকা পালন করায় দৃঢ় প্রত্যয় প্রকাশ করে।
           রক্ত দাতা এবং গ্রহিতা সবাইকে সোনারতরী ফাউন্ডেশন স্বাগত জানায়। রক্তদাতার সঙ্গে গ্রহীতার যোগাযোগ করিয়ে দেওয়াই আমাদের উদ্দেশ্য।আপনি যদি রক্তদানে ইচ্ছুক হয়ে থাকেন তাহলে নিচের <b>‘সদস্য হতে চাই‘</b> বাটনে ক্লিক করুন এবং রক্তদাতার খোঁজ করতে ক্লিক করুণ <b>‘রক্তদাতা চাই‘</b> বাটনে।</p>
 
           <div class="col-md-4 mt-4">
@@ -16,7 +16,8 @@
             <a href="#donation" class="btn btn-danger w-100">রক্তদাতা চাই</a>
           </div>
       </div>
-       <div id="donation" class="row my-4 bg-success p-3 text-white rounded">
+      
+       <div id="donation" class="row my-5 bg-success p-3 text-white rounded">
         <div class="col-md-6">
             <h3>রক্ত অনুসন্ধান করুন</h3>
             <form action="{{url('search')}}" method="POST">
@@ -146,7 +147,7 @@
 
         <div class="col-md-6">
 
-            <h3>প্লাটিলেট অনুসন্ধান করুন</h3>
+            <h3 class="plt">প্লাটিলেট অনুসন্ধান করুন</h3>
             <form action="{{url('searchplatelets')}}" method="POST">
                 @csrf
                 <small class="label">জেলা <span class="text-danger star">*</span> </small>
@@ -272,7 +273,7 @@
           
        <!-----Notice------>
 
-       <div class="row my-4">
+       <div class="row my-5">
         <div class="col-md-6">
           <h4 class="fw-bold">রক্তদাতার জন্য পরামর্শ</h4>
           <ul>
@@ -296,9 +297,9 @@
         <div class="col-md-6">
          
 
-         <h4 class="fw-bold my-4"> রক্তদানের পর যে বিষয়গুলি মনে রাখা দরকার:</h4>
+         <h4 class="fw-bold"> রক্তদানের পর যে বিষয়গুলি মনে রাখা দরকার:</h4>
 
-         <ol>
+         <ul>
           <li style="text-align:justify">
            রক্তদানের পর লাগিয়ে দেওয়া স্ট্রিপ ব্যান্ডেজ অন্তত কয়েক ঘণ্টা রাখুন।
           </li>
@@ -319,23 +320,28 @@
           </li>
 
 
-         </ol>
+         </ul>
         </div>
         
-        <div class="col-md-12 my-4 text-center">
-         <a  href="https://www.facebook.com/groups/1898415033764121" target="_blank" class="btn btn-success w-75 " >
-          <i class="fa-brands fa-facebook fa-1x me-2"></i>
-          ফেইসবুক গ্রুপে জয়েন করুন </a>
-        </div>
+        <div class="col-md-6 my-4 text-center">
+          <a  href="https://www.facebook.com/sbdfb2020?mibextid=ZbWKwL" target="_blank" class="btn btn-success w-75 " >
+           <i class="fa-brands fa-facebook fa-1x me-2"></i>
+           ফেইসবুক 
+           
+            পেইজে জয়েন করুন
+           </a>
+         </div>
+         
+         <div class="col-md-6 my-4 text-center">
+          <a  href="https://www.facebook.com/groups/1898415033764121" target="_blank" class="btn btn-success w-75 " >
+           <i class="fa-brands fa-facebook fa-1x me-2"></i>
+           ফেইসবুক গ্রুপে জয়েন করুন </a>
+         </div>
+       
       
 
        </div>
 
-
-
-
-       
-       
     </div>
 
     <!----Gallery---->

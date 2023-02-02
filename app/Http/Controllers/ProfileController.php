@@ -86,10 +86,18 @@ class ProfileController extends Controller
              return redirect()->back()->with('status','An Error Occured');
         }
 
-
-
     }
 
+
+    public function dateChange(Request $request){
+        $request->validate([
+            'last_donated' => 'required'
+        ]);
+        User::whereId(auth()->user()->id)->update([
+            'last_donated' => $request->last_donated
+        ]);
+        return redirect('/profile')->with('status', 'Date changed successfully!');
+    }
     
     
     

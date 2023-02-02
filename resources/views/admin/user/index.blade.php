@@ -16,10 +16,7 @@
           </form>
 
 
-            <a class="btn btn-outline-dark my-3 float-end" href="{{url('admin/user/logged')}}">
-              <i class="fa-solid fa-users"></i>
-              <span>Logged Users</span>
-            </a>
+           
      
         <table class="table table-bordered">
             <thead>
@@ -68,7 +65,7 @@
 
                                
 
-                               <li class="notification-item ">
+                               {{-- <li class="notification-item ">
                                 <a href="edit" 
                                 class="btn btn-outline-success btn-sm w-100"
                                 >
@@ -84,7 +81,7 @@
                                 <a href="delete" class="btn btn-outline-success btn-sm w-100">
                                     <i class="fa-solid fa-trash"></i>
                                 </a>
-                               </li>
+                               </li> --}}
 
 
 
